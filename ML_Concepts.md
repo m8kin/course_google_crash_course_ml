@@ -1,21 +1,24 @@
 # THE BEGINING
 
-## FRAMING ML
+## FRAMING ML with LINEAR REGRESSION
 
 Supervised ML systems learn how to combine input to produce useful predictions on never before seen data.
 
 **Labels**: is the thing we're predicting. It's the `y variable` in linear regression
 
 <img src="https://latex.codecogs.com/gif.latex?y"/>
+</br>
 
 **Features**: is an input variable. It's the `x variable` in linear regression.
 
 <img src="https://latex.codecogs.com/gif.latex?x_1,x_2,...,x_N"/>
+</br>
 
 **Models**: defines the relationship between features and label
 - **Training**: creating or learning the model. You show the model labeled examples and enable the model to gradually learn the relationships between features and label
 
 - **Inference**: means applying the trained model to unlabeled examples
+</br>
 
 **Linear Regression**: a `Model` where linear combinations of `Features` are used to precited the `Label`.
 
@@ -36,6 +39,9 @@ Using the Feature "Chirps per Minute" to precited the Label "Temperature in Cels
 
 <img src="img/img01.png"/>
 
-Linear regression can have multiple features all woth their own weights:
+Linear regression can have multiple features all with their own weights:
 
 <img src="https://latex.codecogs.com/gif.latex?y'=b+w_1x_1+w_2x_2+w_3x_3+...+w_Nx_N"/>
+
+</br></br>
+## LOSS FUNCTION AND REDUCING LOSS
