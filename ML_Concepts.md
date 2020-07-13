@@ -55,7 +55,7 @@ In supervised learning, a machine learning algorithm builds a model by examining
 
 **Mean Squared Error (L2 loss)**: a popular linear regression loss function for continuous labels
 
-<img src="https://latex.codecogs.com/gif.latex?MSE=\frac1N\sum_{(x,y)\in D}(y-prediction(x))^2"/>
+<img src="https://latex.codecogs.com/gif.latex?MSE=\frac1N\sum_{(x,y)\in_D}(y-prediction(x))^2"/>
 
 where:
 - <img src="https://latex.codecogs.com/gif.latex?(x,y)"/> is an example in which
@@ -70,6 +70,7 @@ High loss in the left model; low loss in the right model.
 
 <img src="img/img02.png"/>
 
+</br></br>
 
 ## REDUCING LOSS: AN ITERATIVE APPROACH
 
@@ -87,7 +88,6 @@ The simple steps:
 
 <img src="img/img03.svg"/>
 
-</br></br>
 
 So the big question is how does step 4 update the parameters so loss is reduced and not increased?
 
