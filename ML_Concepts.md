@@ -37,6 +37,8 @@ Using the Feature "Chirps per Minute" to precited the Label "Temperature in Cels
 
 <img src="https://latex.codecogs.com/gif.latex?y'=2+0.25*x_1"/>
 
+</br>
+
 <img src="img/img01.png"/>
 
 Linear regression can have multiple features all with their own weights:
@@ -45,7 +47,7 @@ Linear regression can have multiple features all with their own weights:
 
 </br></br>
 
-## LOSS FUNCTION AND REDUCING LOSS
+## A LOSS FUNCTION
 
 In supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that minimizes loss; this process is called **empirical risk minimization**.
 
@@ -53,7 +55,7 @@ In supervised learning, a machine learning algorithm builds a model by examining
 
 **Mean Squared Error (L2 loss)**: a popular linear regression loss function for continuous labels
 
-<img src="https://latex.codecogs.com/gif.latex?MSE= \frac1N \sum_{(x,y) \in D} (y-prediction(x))^2"/>
+<img src="https://latex.codecogs.com/gif.latex?MSE=\frac1N\sum_{(x,y)\in D}(y-prediction(x))^2"/>
 
 where:
 - <img src="https://latex.codecogs.com/gif.latex?(x,y)"/> is an example in which
@@ -64,4 +66,11 @@ where:
 - <img src="https://latex.codecogs.com/gif.latex?N"/> is the number of examples in <img src="https://latex.codecogs.com/gif.latex?D"/>
 
 
+High loss in the left model; low loss in the right model.
+
 <img src="img/img02.png"/>
+
+
+## REDUCING LOSS: AN ITERATIVE APPROACH
+
+<img src="img/img03.svg"/>
