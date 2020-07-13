@@ -31,7 +31,7 @@ where
 - <img src="https://latex.codecogs.com/gif.latex?w_1"/>: weigth applied to feature <img src="https://latex.codecogs.com/gif.latex?x_1"/>, also known as the slope. for every 1 increase in <img src="https://latex.codecogs.com/gif.latex?x_1"/>, also known as the slope. for every 1 increase in <img src="https://latex.codecogs.com/gif.latex?x_1"/>, <img src="https://latex.codecogs.com/gif.latex?y'"/> increase by that amount
 - <img src="https://latex.codecogs.com/gif.latex?x_1"/>: the feature
 
-Example: 
+example:
 
 Using the Feature "Chirps per Minute" to precited the Label "Temperature in Celsius". The `Model` is the line.
 
@@ -44,4 +44,24 @@ Linear regression can have multiple features all with their own weights:
 <img src="https://latex.codecogs.com/gif.latex?y'=b+w_1x_1+w_2x_2+w_3x_3+...+w_Nx_N"/>
 
 </br></br>
+
 ## LOSS FUNCTION AND REDUCING LOSS
+
+In supervised learning, a machine learning algorithm builds a model by examining many examples and attempting to find a model that minimizes loss; this process is called **empirical risk minimization**.
+
+**Loss**: is the penalty for a bad prediction
+
+**Mean Squared Error (L2 loss)**: a popular linear regression loss function for continuous labels
+
+<img src="https://latex.codecogs.com/gif.latex?MSE= \frac1N \sum_{(x,y) \in D} (y-prediction(x))^2"/>
+
+where:
+- <img src="https://latex.codecogs.com/gif.latex?(x,y)"/> is an example in which
+    - <img src="https://latex.codecogs.com/gif.latex?x"/> is the set of features
+    - <img src="https://latex.codecogs.com/gif.latex?y"/> is the example's label
+- <img src="https://latex.codecogs.com/gif.latex?prediction(x)"/> is the output of the function of the weights and bias in combination with the set of features
+- <img src="https://latex.codecogs.com/gif.latex?D"/> is a data set containing many labeled examples
+- <img src="https://latex.codecogs.com/gif.latex?N"/> is the number of examples in <img src="https://latex.codecogs.com/gif.latex?D"/>
+
+
+<img src="img/img02.png"/>
