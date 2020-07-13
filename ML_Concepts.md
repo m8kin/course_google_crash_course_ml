@@ -73,4 +73,26 @@ High loss in the left model; low loss in the right model.
 
 ## REDUCING LOSS: AN ITERATIVE APPROACH
 
+Iterative strategies are common in machine learning because they scale well to large data sets
+
+The simple steps:
+
+1) initialise with random intercept and weight values
+2) run model
+3) compute the loss
+4) update intercept and weights (parameter update)
+5) run model
+6) compute the loss
+7) continue steps 4 to 6 until convergence (where loss reduces no futher)
+
 <img src="img/img03.svg"/>
+
+</br></br>
+
+So the big question is how does step 4 update the parameters so loss is reduced and not increased?
+
+An answer is **Gradient Descent**
+
+Regression problems have a lovely property and that is that there **loss functions** are **convex**
+
+<img src="img/img04.svg"/>
