@@ -39,7 +39,7 @@ Using the Feature "Chirps per Minute" to precited the Label "Temperature in Cels
 
 </br>
 
-<img src="img/img01.png"/>
+<img src="img/img01.png" width="600"/>
 
 Linear regression can have multiple features all with their own weights:
 
@@ -68,7 +68,7 @@ where:
 
 High loss in the left model; low loss in the right model.
 
-<img src="img/img02.png"/>
+<img src="img/img02.png" width="600"/>
 
 </br></br>
 
@@ -86,13 +86,13 @@ The simple steps:
 6) compute the loss
 7) continue steps 4 to 6 until convergence (where loss reduces no futher)
 
-<img src="img/img03.svg"/>
+<img src="img/img03.svg" width="600"/>
 
 
 So the big question is how does step 4 update the parameters so loss is reduced and not increased?
 
 An answer is **Gradient Descent**
 
-Regression problems have a lovely property and that is that there **loss functions** are **convex**
+Regression problems have a lovely property and that is that their global **loss function** are **convex** or bowl shaped
 
-<img src="img/img04.svg"/>
+<img src="img/img04.svg" width="600"/>
