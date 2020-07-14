@@ -78,21 +78,24 @@ Iterative strategies are common in machine learning because they scale well to l
 
 The simple steps:
 
-1) initialise with random intercept and weight values
+1) initialise with random `intercept` and `weight` values
 2) run model
 3) compute the loss
-4) update intercept and weights (parameter update)
+4) update `intercept` and `weights` (parameter update)
 5) run model
 6) compute the loss
 7) continue steps 4 to 6 until convergence (where loss reduces no futher)
 
 <img src="img/img03.svg" width="600"/>
 
-
-So the big question is how does step 4 update the parameters so loss is reduced and not increased?
+So the big question is how does step 4 update the `parameters` so loss is reduced and not increased?
 
 An answer is **Gradient Descent**
 
-Regression problems have a lovely property and that is that their global **loss function** are **convex** or bowl shaped
+Regression problems have a lovely property and that is that their global **loss function** are **convex** or bowl shaped in relation to their `parameters`
 
-<img src="img/img04.svg" width="600"/>
+<img src="img/img04.svg" width="400"/>
+
+This means we can easily find the **Gradient** of the loss function's slope and adjust the `paramters` so we move in a negative direction (down the slope)
+
+<img src="img/img05.svg" width="400"/>
