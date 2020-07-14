@@ -76,7 +76,7 @@ High loss in the left model; low loss in the right model.
 
 Iterative strategies are common in machine learning because they scale well to large data sets
 
-The simple steps:
+The simple STEPS:
 
 1) initialise with random `intercept` and `weight` values
 2) run model
@@ -88,14 +88,44 @@ The simple steps:
 
 <img src="img/img03.svg" width="600"/>
 
-So the big question is how does step 4 update the `parameters` so loss is reduced and not increased?
+So the big question is how does STEP 4 update the `parameters` so loss is reduced and not increased?
 
 An answer is **Gradient Descent**
 
-Regression problems have a lovely property and that is that their global **loss function** are **convex** or bowl shaped in relation to their `parameters`
+Regression problems have a lovely property and that is that their **loss function** is **convex** or bowl shaped in relation to their `parameters`. This means we can easily find the **Gradient** of the loss function's slope and adjust the `paramters` so we can iteratively move in a negative direction (down the slope) and therefore reduce the loss to a `global minima`.
 
-<img src="img/img04.svg" width="400"/>
+**Gradients** have both a `direction` (- or +) and a `magnitude` steepness of slop
 
-This means we can easily find the **Gradient** of the loss function's slope and adjust the `paramters` so we move in a negative direction (down the slope)
+<img src="img/img04.svg" width="400"/>  <img src="img/img05.svg" width="400"/>
 
-<img src="img/img05.svg" width="400"/>
+Unfortunately not all loss functions are convex. **Neural Networks** for example have both a `global` and many `local minima`. Thier loss function might look the the swell of on ocean. This means that they have very strong dependecies on their `initial weights` in STEP 1.
+
+### LEARNING RATE
+
+So during STEP 4 when we update the `paramaters`, just how far of a step should we take? This is known as the **Learning Rate** or **Step Size**.
+
+**Learning Rates** are a value (i.e. 0.001, 0.01, 0.1, or 1) that is multipled by the gradent to calcuate how big a step to take. SO if the `gradient magnitude` is 2.5 and the `learning rate` is 0.01, then the gradient descent algorithm will pick the next point 0.025 away from the previous point in the `negative direction`
+
+- Too large a step and we overshoot the `minima`
+- Too small a step and we wait years for `convergence`
+- Golilocks step
+    - flatter gradients can have large learning rates
+    - steeper gradients require smaller learning rates
+
+<img src="img/img06.svg" width="300"/>  <img src="img/img07.svg" width="300"/>  <img src="img/img08.svg" width="300"/>
+
+
+### MINI BATCH AND STOCHASTIC GRADIENT DESCENT
+
+The reason **Gradient Descent** scales so well to large datasets is because it can be calculated on just a sample of data.
+
+**Gradient Descent**: uses all the data to calculate the gradient, slow
+
+**Stochastic Gradient Descent**: just one sample at a time to calculate the gradient, fast but noisy
+
+**Mini-Batch Gradient Descent**: batches of 10-1000 to calculate the gradient, good
+
+Checkout http://playground.tensorflow.org/ from Google!
+
+
+
