@@ -100,6 +100,8 @@ Regression problems have a lovely property and that is that their **loss functio
 
 Unfortunately not all loss functions are convex. **Neural Networks** for example have both a `global` and many `local minima`. Thier loss function might look the the swell of on ocean. This means that they have very strong dependecies on their `initial weights` in STEP 1.
 
+</br>
+
 ### LEARNING RATE
 
 So during STEP 4 when we update the `paramaters`, just how far of a step should we take? This is known as the **Learning Rate** or **Step Size**.
@@ -108,22 +110,23 @@ So during STEP 4 when we update the `paramaters`, just how far of a step should 
 
 - Too large a step and we overshoot the `minima`
 - Too small a step and we wait years for `convergence`
-- Golilocks step
+- Goldilocks step
     - flatter gradients can have large learning rates
     - steeper gradients require smaller learning rates
 
-<img src="img/img06.svg" width="300"/>  <img src="img/img07.svg" width="300"/>  <img src="img/img08.svg" width="300"/>
+<img src="img/img06.svg" width="2500"/>  <img src="img/img07.svg" width="300"/>  <img src="img/img08.svg" width="250"/>
 
+</br>
 
 ### MINI BATCH AND STOCHASTIC GRADIENT DESCENT
 
 The reason **Gradient Descent** scales so well to large datasets is because it can be calculated on just a sample of data.
 
-**Gradient Descent**: uses all the data to calculate the gradient, slow
+- **Gradient Descent**: uses all the data to calculate the gradient, slow
 
-**Stochastic Gradient Descent**: just one sample at a time to calculate the gradient, fast but noisy
+- **Stochastic Gradient Descent**: just one sample at a time to calculate the gradient, fast but noisy
 
-**Mini-Batch Gradient Descent**: batches of 10-1000 to calculate the gradient, good
+- **Mini-Batch Gradient Descent**: batches of 10-1000 to calculate the gradient, good
 
 Checkout http://playground.tensorflow.org/ from Google!
 
