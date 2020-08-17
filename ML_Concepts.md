@@ -1,5 +1,21 @@
 # THE BEGINING
 
+[FRAMING](#FRAMING-ML-with-LINEAR-REGRESSION)
+
+[LOSS FUNCTION](#A-LOSS-FUNCTION)
+
+[REDUCING LOSS](#REDUCING-LOSS:-AN-ITERATIVE-APPROACH)
+
+[LEARNING RATE](#LEARNING-RATE)
+
+[BATCH](#MINI-BATCH-AND-STOCHASTIC-GRADIENT-DESCENT)
+
+[EPOCH](#EPOCH)
+
+[SUMMARY](#SUMMARY-OF-HYPER-PARAMETER-TUNING)
+
+
+
 ## FRAMING ML with LINEAR REGRESSION
 
 Supervised ML systems learn how to combine input to produce useful predictions on never before seen data.
@@ -114,7 +130,7 @@ So during STEP 4 when we update the `paramaters`, just how far of a step should 
     - flatter gradients can have large learning rates
     - steeper gradients require smaller learning rates
 
-<img src="img/img06.svg" width="2500"/>  <img src="img/img07.svg" width="300"/>  <img src="img/img08.svg" width="250"/>
+<img src="img/img06.svg" width="250"/>  <img src="img/img07.svg" width="300"/>  <img src="img/img08.svg" width="250"/>
 
 </br>
 
