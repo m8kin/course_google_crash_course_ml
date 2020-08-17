@@ -4,7 +4,7 @@
 
 [LOSS FUNCTION](#A-LOSS-FUNCTION)
 
-[REDUCING LOSS](#REDUCING-LOSS:-AN-ITERATIVE-APPROACH)
+[REDUCING LOSS](#REDUCING-LOSS-AN-ITERATIVE-APPROACH)
 
 [LEARNING RATE](#LEARNING-RATE)
 
@@ -88,7 +88,7 @@ High loss in the left model; low loss in the right model.
 
 </br></br>
 
-## REDUCING LOSS: AN ITERATIVE APPROACH
+## REDUCING LOSS AN ITERATIVE APPROACH
 
 Iterative strategies are common in machine learning because they scale well to large data sets
 
