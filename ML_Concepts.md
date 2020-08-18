@@ -99,7 +99,7 @@ The simple STEPS:
 3) compute the loss
 4) update `intercept` and `weights` (parameter update)
 5) run model
-6) compute the loss
+6) compute the loss aka measure the `evaluation metric`
 7) continue steps 4 to 6 until convergence (where loss reduces no futher)
 
 <img src="img/img03.svg" width="600"/>
@@ -199,4 +199,15 @@ The idea is to `train` the `model` on a subset of data and then `test` it or eva
 </br>
 
 ### k-Fold Cross Validation
-Takes training and testing to the next level
+Takes training and testing to the next level. In this method NO `validation` set is used.
+
+Steps:
+1. divide up the data into `k` blocks (5 to 10 blocks is typical)
+2. `train` the `model` all blocks bar one
+3. `test` the `model`one block and retain the `evaluation metric` for both the `train` and `test` sets
+4. repeate this process `k` times and retain each `evaluation metric`
+5. check the distributions of the `evaluation metric` and 
+
+If the `evaluation metric` is stable, meaning it is similar between `traing` and `test` sets and also doesn't vary greatly then the `model` should generalise well.
+
+The super extreme to the is **N-Fold Cross Validation** where the data is broken into N blocks
