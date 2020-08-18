@@ -211,3 +211,13 @@ Steps:
 If the `evaluation metric` is stable, meaning it is similar between `traing` and `test` sets and also doesn't vary greatly then the `model` should generalise well.
 
 The super extreme to the is **N-Fold Cross Validation** where the data is broken into N blocks
+
+</br>
+
+### Gradient Descent and Cross Validation
+TBC
+
+</br>
+
+## REPRESENTATION
+
