@@ -167,4 +167,36 @@ Most machine learning problems require a lot of hyperparameter tuning. Unfortuna
 - For real-world datasets consisting of a very large number of examples, the entire dataset might not fit into memory. In such cases, you'll need to reduce the batch size to enable a batch to fit into memory.
 
 
+</br>
 
+## GENERALISTION
+
+Refers to a model's ability to adapt to new, previously unseen data. It is assumed that the new data is drawn from the same **distribution** as the one used to create the model meaning the distribution is `stationary`
+
+`Overfitting` is when the mode is too attuned to the training data and doesn't `generalise` well to new data.
+
+</br>
+
+### Train, Test and Validation Data Subsets
+
+The idea is to `train` the `model` on a subset of data and then `test` it or evaluate it on an unseen set of data. We the choose a model which performs well across both the `train` and `test` sets. A final evaluation is performed on the `validation` set.
+
+</br>
+
+**Train Set**: a random subset of data is drawn from the complete data set and is used to build the `model`.
+
+- needs to be large enough to represent the complete data distribution
+- a rule of thumb is 70% to 80% of the data
+
+**Test Set**: half of the remaining data not drawn from the **training set** is used to test the `model` and to tweak any `hyperparameters` or `features`
+
+- needs to be large enough to yield meaningful results
+- is representative of the data as a whole
+- a `generalised model` will perfom equal on the traing and test set
+
+**Validation Set**: the remaing data is used as a final evaluation of the model
+
+</br>
+
+### k-Fold Cross Validation
+Takes training and testing to the next level
