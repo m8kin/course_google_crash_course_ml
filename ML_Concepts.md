@@ -219,5 +219,89 @@ TBC
 
 </br>
 
-## REPRESENTATION
+## REPRESENTATION & FEATURES
+You must create a representation of the real world problem using data. `Feature engineering` is extracting meaningful representations of the real world from raw data into a `feature vector`.
 
+Many machine learning models must represent the features as **real-numbered vectors** since the feature values must be **multiplied by the model weights**.
+
+</br>
+
+### Qualities of Good Features:
+- have clear an obivous meanings
+- not use "magic" values i.e. fake vaules to represent missing data such a -1
+    - use boolean features to capture missing data
+    - if the missing data is from a discrete set create a n ew category
+    - if the missing data is from a numeric set use the mean value or other imputation techniques
+- feature values shouldn't change overtime (stationarity)
+- not have outlier values
+- have a good amount of variance and avoid rarley used discrete values
+- be non null
+- be monitored overtime
+
+</br>
+
+### Mapping Values:
+- **numeric**: Integer and floatS data don't need encoding because they can be multiplied by a numeric weight
+- **categoric**: Have a discrete set of values that are non numeric. 
+    - `one hot encoding`: where categories are converted to binary vectors (one for each class)
+    - `multi hot encoding` where categories are converted to binary vectors (one for each class or multiclass)
+
+
+</br>
+
+### Sparse vs Dense Representation:
+
+Example, the English language consists of about a million words. Consider two ways to represent a count of the words used in one English sentence:
+- A dense representation of this sentence must set an integer for all one million cells, placing a 0 in most of them, and a low integer into a few of them.
+- A sparse representation of this sentence stores only those cells symbolizing a word actually in the sentence. So, if the sentence contained only 20 unique words, then the sparse representation for the sentence would store an integer in only 20 cells.
+
+</br>
+
+### Cleaning:
+
+Transforming:
+
+- Use powers to `transform` data closer to the normal distribution (away from the skew)
+- makes more data "available" by removes the impact of outliers and increasing variance
+- creates linear relationships
+- options include Box-Cox or Tukey
+
+Tukey Ladder of Powers:
+<img src="img/img09.png" width="600"/>
+
+</br>
+
+Scaling:
+
+- Converting floating-point feature values from their natural range into a standard range (for example, 0 to 1 or -1 to +1)
+- Helps `gradient descent` converge more quickly.
+- Helps avoid the "NaN trap," in which one number in the model becomes a NaN because it's too extreme
+- Helps the model learn appropriate `weights` for each feature and not be bias to `outliers`.
+
+</br>
+
+Extreme Outliers:
+
+- extreme outliers can impact linear models
+- transformaing as mentioned above can be used
+- `clipping` means any value outside of a threshold becomes that threshold. 
+    - i.e. a value outside of a standardised score of 4 the values becomes a 4
+
+
+</br>
+
+Binning:
+
+- converting numeric data to categories
+- useful when the numeric value has no linear meaning or relationship
+    - such as co-oridnates
+    - i.e. Counts per Latitude
+
+<img src="img/img10.svg" width="600"/>
+
+
+
+</br></br>
+
+### Feature Crosses
+A `feature cross` is a `synthetic feature` formed by multiplying (crossing) two or more features. Crossing combinations of features can provide predictive abilities beyond what those features can provide individually.
