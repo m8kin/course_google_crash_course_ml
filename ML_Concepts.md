@@ -305,3 +305,41 @@ Binning:
 
 ### Feature Crosses
 A `feature cross` is a `synthetic feature` formed by multiplying (crossing) two or more features. Crossing combinations of features can provide predictive abilities beyond what those features can provide individually.
+
+</br>
+
+Feature Crosses: Encoding Nonlinearity
+
+Linear learners use linear models so to solve below with a single line is not achievable. 
+
+<img src="img/img11.png" width="300"/>
+
+However by creating a new vector on a Z axis where we multiply X and Y we can create linearable seperable data.
+
+<img src="img/img12.png" width="600"/>
+
+Linear learners use linear models and such learners scale well to massive data.
+But without feature crosses, the expressivity of these models would be limited
+Using feature crosses + massive data is one efficient strategy for learning highly complex models
+
+</br>
+
+Feature Crosses: Crossing One-Hot Vectors
+
+As mentioned before, creating one-hot Vectors is the process of creating binary fields for each category such as with a vector of 4 colours
+
+    colour: [blue, green, green, red]
+    clothing: [hat,hat,pants,pants]
+
+becomes via one hot encoding:
+
+    colour_blue [1,0,0,0]
+    colour_green [0,1,1,0]
+    colour_red [0,0,0,1]
+    clothing_hat: [1,1,0,0]
+    clothing_pants: [0,0,1,1]
+
+
+The process of then crossing these could create a `feature` with greater `signal` for what we are trying to predict (i.e is someone a police officer) such as
+
+    colour_blue * clothing_hat = clothing_blue_hat: [1,0,0,0]
