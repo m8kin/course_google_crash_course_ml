@@ -12,9 +12,16 @@
 
 [EPOCH](#EPOCH)
 
-[SUMMARY](#SUMMARY-OF-HYPER-PARAMETER-TUNING)
+[SUMMARY OF HYPERPARAMTERES](#SUMMARY-OF-HYPER-PARAMETER-TUNING)
+
+[GENERALISATION](#GENERALISATION)
+
+[FEATURES](#REPRESENTATION-&-FEATURES)
+
+[REGULARIZATION](#REGULARIZATION)
 
 
+</br></br>
 
 ## FRAMING ML with LINEAR REGRESSION
 
@@ -267,9 +274,10 @@ Transforming:
 - options include Box-Cox or Tukey
 
 Tukey Ladder of Powers:
-<img src="img/img09.png" width="600"/>
 
-</br>
+<img src="img/img09.png" width="400"/>
+
+</br></br>
 
 Scaling:
 
@@ -314,9 +322,14 @@ Linear learners use linear models so to solve below with a single line is not ac
 
 <img src="img/img11.png" width="300"/>
 
+
+</br></br>
+
 However by creating a new vector on a Z axis where we multiply X and Y we can create linearable seperable data.
 
 <img src="img/img12.png" width="600"/>
+
+</br></br>
 
 Linear learners use linear models and such learners scale well to massive data.
 But without feature crosses, the expressivity of these models would be limited
@@ -343,3 +356,7 @@ becomes via one hot encoding:
 The process of then crossing these could create a `feature` with greater `signal` for what we are trying to predict (i.e is someone a police officer) such as
 
     colour_blue * clothing_hat = clothing_blue_hat: [1,0,0,0]
+
+</br></br>
+
+## REGULARIZATION
