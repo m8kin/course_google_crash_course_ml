@@ -360,3 +360,83 @@ The process of then crossing these could create a `feature` with greater `signal
 </br></br>
 
 ## REGULARIZATION
+
+Regularistion is used to avoid `overfitting` by **penalising model complexity**
+
+It's all about not trusting your training data too much and helping it generalise to `validation` data. The image below shows the example of where over many iterations the `loss` of our model improves for both the `training` and `validation` data but the at a point in time it starts to `overfit` on the `training` data indicated but the `loss` diverging and then increasing on the `validation data`
+
+</br>
+
+<img src="img/img13.png" width="400"/>
+
+</br></br>
+
+### How do we define model complexity?
+
+Regularisation happens during training and is applied to the `loss function`.
+
+</br>
+
+<img src="https://latex.codecogs.com/gif.latex?minimise: Loss(Data|Model)+complexity(Model)"/>
+
+
+</br>
+</br>
+
+In general it is by **preferring smaller parameter weights** and diverging from this should incur a cost
+
+Can encode this idea via `L1 or L2 regularization` where model complexity is either the the sum of the absolute values of the weights or the sum of the squares of the weights. The amount in which the `regularisation` impacts the `loss funtion` is controled by `Lambda (a.k.a regularisation rate`).
+
+</br>
+
+Lambda <img src="https://latex.codecogs.com/gif.latex?\lambda"/> is a scalar value between 0 and inf.
+
+- too high you run the risk of `underfitting` your data. Your model won't learn enough about the training data to make useful predictions.
+
+- too low you run the risk of `overfitting` your data. Your model will learn too much about the particularities of the training data, and won't be able to generalize to new data.
+
+</br>
+
+**L1 regularization (a.k.a. lasso):**
+
+<img src="https://latex.codecogs.com/gif.latex?minimise: complexity(Model)=\lambda\sum |w_i|"/>
+
+</br>
+</br>
+
+L2 regularization (a.k.a. ridge):
+
+<img src="https://latex.codecogs.com/gif.latex?minimise: complexity(Model)=\lambda\sum (w_i)^2"/>
+
+
+- Penalizes really big weights
+- For linear models: prefers flatter slopes
+- Encourages weight values toward 0 (but not exactly 0)
+- Encourages the mean of the weights toward 0, with a normal (bell-shaped or Gaussian) distribution
+  - Bayesian prior:
+  - weights should be centered around zero
+  - weights should be normally distributed
+
+</br>
+</br>
+
+**Caution:**
+There's a close connection between `learning rate` and `lambda`. Strong L2 regularization values tend to drive feature weights closer to 0. Lower learning rates (with early stopping) often produce the same effect because the steps away from 0 aren't as large. Consequently, tweaking `learning rate` and `lambda` simultaneously may have confounding effects.
+
+</br>
+</br>
+
+### Early Stopping
+
+Means ending training before the model fully reaches convergence.
+
+</br>
+</br>
+
+### Number of Features
+
+
+</br>
+</br>
+
+### Drop Out
